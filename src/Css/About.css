@@ -25,9 +25,12 @@
 }
 .About-box{
     width: 400px;
-     display: flex;
+     
     margin: 10px 0px;
    
+}
+.flex{
+    display: flex;
 }
 .About-box img{
     min-width:340px;

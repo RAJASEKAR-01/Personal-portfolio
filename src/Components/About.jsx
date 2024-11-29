@@ -18,7 +18,7 @@ function About() {
           <p>🌱 Fun Fact: I’m a fitness enthusiast who believes in balancing health and technology!          </p>
           <p>Feel free to explore my journey, skills, and projects. Together, let’s create something extraordinary!          </p>
         </div>
-        <div className='About-box'> 
+        <div className='About-box flex'> 
         <img src={Raja} alt="raja" />
         </div>
         </div>
