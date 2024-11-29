@@ -1,0 +1,134 @@
+.Navbar-section{
+    height:60px;
+    width:100%;
+    position: fixed;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+}
+.nav{
+    background-color: #000000;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+
+}
+.nav div{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+a{
+    cursor: pointer;
+}
+.nav ul{
+    display: flex;
+    width:50%;
+ 
+    justify-content:space-around;
+}
+.nav ul li{
+    list-style-type: none;
+    color: rgb(246, 246, 246);
+    padding: 5px 10px;
+    
+
+
+}
+.nav ul li:hover{
+    
+    box-shadow: 2px 2px 14px #007BFF;
+   
+}
+.side-nav{
+    position: absolute;
+    background-color:rgb(0, 0, 0);
+    width:100%;
+    display: none;
+    transition: all 2s ease-in;
+    color: white;
+   
+    
+}
+.side-nav div{
+    position:fixed;
+    width:100%;
+    text-align: center;
+   
+}
+.side-nav ul li a{
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+    padding: 20px 80px;
+    
+}
+.block{
+    display: block;
+    position: absolute;
+    height: 100%;
+    width:100%;
+    transition: all 2s ease-in;
+    z-index: 1;
+
+}
+
+.side-nav ul li{
+    margin: 50px;
+    padding: 20px;
+    border-radius: 5px;
+    width:50%;
+    
+    display: block;
+
+  background: linear-gradient(to right, black 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all .5s ease-out;
+
+}
+.side-nav ul{
+    background-color: #000000;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    
+}
+.side-nav ul li:hover{
+    box-shadow: 2px 2px 14px black;
+    border:none;   
+    background-color: black;
+    background-position: left bottom;
+    
+}
+.side-nav ul li a:hover{
+    text-transform: capitalize;
+    color:rgb(255, 255, 255);
+    cursor: pointer;
+
+   
+}
+
+.btn{
+    display: none;
+    cursor: pointer;
+}
+@media screen and (max-width:1000px){
+
+    .nav ul{
+        display: none;
+    }
+    .btn{
+        display: block;
+    }
+    
+}
+@media screen and (min-width:1000px){
+    .side-nav{
+        display: none;
+        
+    }
+}

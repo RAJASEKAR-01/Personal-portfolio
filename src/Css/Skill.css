@@ -1,0 +1,166 @@
+.Skills{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+}
+.Skill-Container{
+    width: 80%;
+    
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    
+
+    
+}
+.Skill-section-Head{
+    color: white;
+    text-align: center;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    font-family: "Sriracha", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.Skill-section{
+    
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    min-height:40vh;
+    align-items: center;
+    
+
+}
+.Skill-box{
+    border:2px solid rgb(134, 42, 195);
+    
+    width:250px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    color: black;
+    background: rgb(205,8,255);
+    background: linear-gradient(90deg, rgba(205,8,255,1) 0%, rgba(101,31,125,1) 79%); 
+    box-shadow: 2px 2px 20px  rgb(181, 8, 224) ;
+    border-radius: 5px;
+    font-family: "Sriracha", serif;
+    font-weight: 400;
+    font-style: normal;
+    cursor:pointer;
+    transition: 2s all ;
+    
+
+}
+
+
+.Skill-section h1{
+    color: rgb(222, 8, 8);
+}
+.Skill-section ul{
+    
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin:0;
+    margin-right:20px ;
+    
+}
+.Skill-section ul li{
+  
+  margin: 40px;
+
+    
+}
+.Skill-section ul li img{
+    width:70px;
+    height:70px;
+    border:1px solid rgb(180, 117, 221);
+    padding: 10px;
+    border-radius: 10px;
+    transition: 2s linear all;
+    background: left bottom;
+    
+    
+}
+/* Hover animation for skill icons */
+.Skill-section ul li img {
+  width: 70px;
+  height: 70px;
+  border: 1px solid rgb(180, 117, 221);
+  padding: 10px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Skill-section ul li img:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 4px 15px rgba(205, 8, 255, 0.6);
+}
+
+/* Fade-in animation for skill categories */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.Skill-box {
+  animation: fadeIn 0.8s ease forwards;
+  opacity: 0; /* Default opacity set to 0 for animation */
+}
+
+.Skill-box:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.Skill-box:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.Skill-box:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.Skill-box:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+/* Bounce effect on click */
+.Skill-box:active {
+  transform: scale(0.95);
+  box-shadow: 0px 2px 10px rgba(255, 0, 255, 0.4);
+}
+
+/* Slide-in effect for skill images */
+@keyframes slideIn {
+  0% {
+      transform: translateX(-50%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+.Skill-section ul li {
+  animation: slideIn 0.5s ease forwards;
+  opacity: 0; /* Default opacity for animation */
+}
+
+.Skill-section ul li:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.Skill-section ul li:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.Skill-section ul li:nth-child(3) {
+  animation-delay: 0.6s;
+}

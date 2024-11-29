@@ -1,0 +1,38 @@
+.About-section{
+    width:100%;
+    min-height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+.About-container{
+    width: 80%;
+    color:white  ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.About-Head{
+    text-align: center;
+}
+.About{
+    width:80%;
+    height:80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.About-box{
+    width: 400px;
+   
+    margin: 10px 0px;
+   
+}
+.About-box img{
+    width:400px;
+    height:300px;
+    border-radius: 20px;
+    
+    
+}
