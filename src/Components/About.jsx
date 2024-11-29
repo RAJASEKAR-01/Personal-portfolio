@@ -19,7 +19,7 @@ function About() {
           <p>Feel free to explore my journey, skills, and projects. Together, let’s create something extraordinary!          </p>
         </div>
         <div className='About-box'> 
-        <img src={Raja} alt="" />
+        <img src={Raja} alt="raja" />
         </div>
         </div>
         
