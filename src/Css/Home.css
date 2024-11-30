@@ -2,15 +2,19 @@
 .Home-section{
     width:100%;
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
     min-height: 100vh;
     background-color: black;
     display: flex;
-    justify-content: space-around;
+    justify-content:center;
     align-items: center;
     
     
+    
+}
+.Home-Container{
+    min-width:80%;
+    display: flex;
+    justify-content: center;
     
 }
 .box{

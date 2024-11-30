@@ -15,6 +15,7 @@ function Home() {
 
   return (
     <div className='Home-section'>
+    <div className='Home-Container'>
       <div className='box'>
         <div className='content'>
           <h1>Hello!</h1>
@@ -47,6 +48,7 @@ function Home() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }
