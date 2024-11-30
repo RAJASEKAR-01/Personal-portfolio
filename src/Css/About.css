@@ -33,7 +33,7 @@
     display: flex;
 }
 .About-box img{
-    min-width:100%;
+    width:100px;
     height:300px;
     border-radius: 20px;
     
