@@ -65,8 +65,7 @@ a{
 .side-nav ul li a{
     text-decoration: none;
     color:rgb(0, 0, 0);
-    padding: 20px 80px;
-    
+        
 }
 .block{
     display: block;
@@ -84,14 +83,16 @@ a{
     border-radius: 5px;
     width:50%;
     
-    display: block;
+    list-style: none;
+    
 
-  background: linear-gradient(to right, black 50%, white 50%);
-  background-size: 200% 100%;
-  background-position: right bottom;
-  transition: all .5s ease-out;
+    background: linear-gradient(to right, black 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
 
 }
+
 .side-nav ul{
     background-color: #000000;
     display: flex;
@@ -110,7 +111,9 @@ a{
     background-color: black;
     background-position: left bottom;
     
+    
 }
+
 .side-nav ul li a:hover{
     
     color:rgb(255, 255, 255);
