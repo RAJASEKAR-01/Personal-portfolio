@@ -11,7 +11,7 @@
     height: 100%;
     width: 100%;
     display: flex;
-    color: white;
+    color: rgb(224, 28, 28);
     justify-content: space-between;
 
 }
@@ -116,7 +116,7 @@ a{
     display: none;
     cursor: pointer;
 }
-@media screen and (max-width:1000px){
+@media screen and (max-width:768px){
 
     .nav ul{
         display: none;
@@ -126,7 +126,7 @@ a{
     }
     
 }
-@media screen and (min-width:1000px){
+@media screen and (min-width:768px){
     .side-nav{
         display: none;
         
