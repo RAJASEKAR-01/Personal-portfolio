@@ -79,7 +79,7 @@ a{
 }
 
 .side-nav ul li{
-    margin: 10px;
+    margin: 40px 10px;
     padding: 20px;
     border-radius: 5px;
     width:50%;
@@ -112,7 +112,7 @@ a{
     
 }
 .side-nav ul li a:hover{
-    text-transform: capitalize;
+    
     color:rgb(255, 255, 255);
     cursor: pointer;
 }
