@@ -63,6 +63,7 @@ padding: 0px 10%;
     width:100%;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 button:hover{
     
