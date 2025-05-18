@@ -25,8 +25,9 @@ function Home() {
               2000,
               'I am Web Developer',
               2000,
-              'I am Final Year Student',
-              2000
+              'I love building creative web apps',
+              2000,
+              
             ]}
             wrapper="span"
             speed={10}
