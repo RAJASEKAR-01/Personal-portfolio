@@ -6,7 +6,7 @@
     justify-content: center;
 }
 .About-container{
-    width: 80%;
+    width: 90%;
     color:white  ;
     display: flex;
     flex-direction: column;
@@ -31,8 +31,8 @@
 }
 
 .About-box img {
-    max-width: 100%; /* Ensure the image doesn't exceed its container's width */
-    height: auto;    /* Maintain the aspect ratio */
+    max-width: 70%; /* Ensure the image doesn't exceed its container's width */
+    height: 50%;    /* Maintain the aspect ratio */
     border-radius: 20px;
 }
 

@@ -33,7 +33,7 @@ function Home() {
             style={{ fontSize: '2em', display: 'inline-block' }}
             repeat={Infinity}
           />
-          <p>Pursing Bsc CS with Cyber Security at Dr.SNS Rajalakshmi College of Arts and Science. My passion lies in building innovative solutions with code and learning new technologies. I specialize in web development and I love working on projects that solve real-world problems.</p>
+          <p>I'm a Computer Science graduate specializing in Cybersecurity, passionate about web development and building real-world digital solutions. I love turning ideas into responsive, user-friendly applications and continuously learning new technologies.</p>
           <div className='Home-Btn'>
             <button className='normal' onClick={contactMe}>Contact Me</button>
             <AwesomeButtonProgress
