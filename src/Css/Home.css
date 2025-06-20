@@ -7,6 +7,10 @@
     display: flex;
     justify-content:center;
     align-items: center;
+    background-image: url('./Boxes.png');
+    background-position: center;
+    background-size: cover;
+    Color:white;
     
     
     
@@ -17,7 +21,7 @@
     justify-content: center;
     
 }
-.box{
+/*.box{
     min-width:300px;
     height: 500px;
     width:1000px;
@@ -36,6 +40,7 @@
 .box:hover{
     box-shadow: 0px 2px 15px #e26222b7;
 }
+    */
 .box .content{
     text-align: center;
 }
