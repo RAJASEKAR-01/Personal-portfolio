@@ -1,106 +1,166 @@
-@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Caveat:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&family=Sriracha&display=swap');
 
-.Project-section {
-    min-height: 100vh;
-    width: 100%;
-    background-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    padding: 20px 0;
-    box-sizing: border-box;
-    flex-direction: column;
+.glass-section {
+  background-color: #000;
+  padding: 60px 20px;
+  min-height: 100vh;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.Project-container {
-    width: 90%; /* Ensures it adapts to different screen sizes */
-    max-width: 1200px; /* Prevents content from stretching too wide */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Center the items */
-    gap: 20px; /* Adds space between project boxes */
+.glass-title {
+  font-size: 2.5rem;
+  font-family: 'Sriracha', serif;
+  color: #ffffff;
+  margin-bottom: 40px;
 }
 
-.Project-box {
-    width: 300px;
-    min-height: 350px;
-    background-color: #000000; /* Slight contrast from the black background */
-    border: 2px solid black;
-    margin: 10px;
-    display: flex;
-    flex-direction: column; /* Stacks elements vertically */
-    align-items: center;
-    text-align: center;
-    border-radius: 10px; /* More rounded corners for modern design */
-    overflow: hidden; 
-    padding: 15px;/* Prevents content overflow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+.glass-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  width: 100%;
+  max-width: 1100px;
 }
 
-.Project-box:hover {
-    box-shadow: 0 8px 36px #007BFF;
-    transform: translateY(-5px); /* Slight lift on hover */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.Project-box img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover; /* Ensures images maintain their aspect ratio */
-    border-bottom: 2px solid black;
+.glass-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 35px rgba(0, 255, 255, 0.4);
 }
 
-.Project-box h3 {
-    margin: 10px 0 5px;
-    font-family: "Sriracha", serif;
-    font-weight: 400;
-    font-size: 1.2rem;
-    color: #f0f8ff;
-    text-transform: capitalize; /* Makes sure project names look consistent */
+.glass-card img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
 }
 
-.Project-box p {
-    flex-grow: 1; /* Allows the description text to take up remaining space */
-    font-size: 0.9rem;
-    color: #dcdcdc;
-    margin: 5px 10px;
+.glass-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
-.Project-box small {
+.glass-content h3 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #00e6e6;
+  margin-bottom: 8px;
+}
+
+.glass-content p {
+  font-size: 0.85rem;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.glass-content small {
+  font-size: 0.75rem;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.glass-content a {
+  text-decoration: none;
+  display: block;
+}
+
+.glass-content button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(to right, #0072ff, #00c6ff);
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-content button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #00c6ff;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Mobile tweaks */
+@media (max-width: 480px) {
+  .glass-title {
+    font-size: 2rem;
+  }
+
+  .glass-content h3 {
+    font-size: 1rem;
+  }
+
+  .glass-content p {
     font-size: 0.8rem;
-    color: #a9a9a9;
-    margin-bottom: 10px;
-    display: block; /* Ensures it's on a new line */
+  }
+
+  .glass-content button {
+    font-size: 0.8rem;
+  }
+}
+.glass-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* WAS 220px */
+  gap: 25px;
+  width: 100%;
+  max-width: 1150px;
 }
 
-.Project-box button {
-    width: 100%; /* Ensure buttons span the same width */
-    max-width: 150px; /* Optional: Limit the maximum size of the button */
-    height: 40px; /* Adjust button height for consistency */
-    margin-top: auto; /* Push button to the bottom */
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0px 6px 0px rgb(8, 70, 177);
-    font-family: "Josefin Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 300px;
 }
 
-.Project-box button a {
-    text-decoration: none;
-    color: white;
-    display: block;
-    height: 100%; /* Ensures the entire button is clickable */
-    line-height: 40px; /* Centers text vertically */
-}
-
-.Project-box button:hover {
-    background-color: #0056b3;
-    transform: scale(1.05); /* Slightly enlarges the button */
-}

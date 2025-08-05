@@ -1,74 +1,67 @@
 import "../Css/Project.css";
-import ProjectImage from '../Images/P-weather.png'; 
+import WeatherImg from '../Images/Weatherweb.png';
+import PortfolioImg from '../Images/portfolio.png';
+import TicTacToeImg from '../Images/tic-tac-toe.png';
+import EcommerceMERNImg from '../Images/Ecommerce.png'; // Add your image here
 
 function Project() {
     const projects = [
         { 
             id: 1, 
-            projectname: "Weather Web Application", 
-            description: "A real-time weather application showing current conditions and forecasts using the OpenWeather API.",
-            technologies: "React.js, CSS, OpenWeather API",
-            link: "https://rajasekar-01.github.io/Weather-Website/" 
+            image: EcommerceMERNImg,
+            projectname: "E-Commerce MERN Web App",
+            description: "Full-stack e-commerce app with login, cart, payment, and admin features.",
+            technologies: "MongoDB, Express.js, React.js, Node.js",
+            link: "https://ecommerce-new-demo.vercel.app/"  
         },
         { 
             id: 2, 
-            projectname: "Personal Portfolio", 
-            description: "A personal portfolio showcasing my projects, skills, and contact information. ",
-            technologies: "HTML, CSS, JavaScript, Bootstrap",
-            link: "https://rajasekar-m-portfolio.netlify.app" 
-        },
-        { 
-            id: 3, 
-            projectname: "Profile Card", 
-            description: "An interactive profile card built using React.js, showcasing modern design principles.",
-            technologies: "React.js, CSS",
-            link: "https://RAJASEKAR-01.github.io/PROFILE-CARD--REACT-JS/" 
-        },
-        { 
-            id: 4, 
-            projectname: "E-Commerce Front-end", 
-            description: "A front-end design for an e-commerce platform featuring a modern, responsive UI.",
-            technologies: "HTML, CSS, JavaScript",
-            link: "https://rajasekar-ecommerce.netlify.app/" 
+            image: WeatherImg,
+            projectname: "Weather App", 
+            description: "Real-time weather app using OpenWeather API.",
+            technologies: "React.js, CSS, OpenWeather API",
+            link: "https://rajasekar-01.github.io/Weather-Website/"
+            
         },
         {
-            id:5,
-            projectname: "Tic-Tac-Toe game",
-            description: "An interactive and responsive Tic-Tac-Toe game showcasing game logic, sleek design, and seamless deployment on Netlify.",
+            id: 3,
+            image: PortfolioImg,
+            projectname: "Personal Portfolio", 
+            description: "Modern portfolio to showcase projects and skills.",
+            technologies: "HTML, CSS, JS, Bootstrap",
+            link: "https://rajasekar-m-portfolio.netlify.app" 
+            
+        },
+        {
+            id: 4,
+            image: TicTacToeImg,
+            projectname: "Tic-Tac-Toe Game",
+            description: "Fun, responsive 2-player game in JavaScript.",
             technologies: "HTML, CSS, JavaScript",
             link: "https://tic-tac-toe-game-raja.netlify.app/"
+            
         }
     ];
 
-    function Box({ projectname, description, technologies, link }) {
-        return (
-            <div className='Project-box'>
-                <img src={ProjectImage} alt="Project Preview" />
-                <h3>{projectname}</h3>
-                <p>{description}</p>
-                <small><strong>Technologies:</strong> {technologies}</small>
-                <button>
-                    <a href={link} target="_blank" rel="noopener noreferrer">Visit Project</a>
-                </button>
-            </div>
-        );
-    }
-
     return (
-        <div className='Project-section'>
-            <h1>Projects</h1>
-            <div className='Project-container'>
-                {projects.map((project) => (
-                    <Box 
-                        key={project.id} 
-                        projectname={project.projectname} 
-                        description={project.description} 
-                        technologies={project.technologies}
-                        link={project.link}
-                    />
+        <section className="glass-section">
+            <h1 className="glass-title">🚀 Projects</h1>
+            <div className="glass-grid">
+                {projects.map((project, index) => (
+                    <div className="glass-card" key={project.id} style={{ animationDelay: `${index * 0.2}s` }}>
+                        <img src={project.image} alt={project.projectname} />
+                        <div className="glass-content">
+                            <h3>{project.projectname}</h3>
+                            <p>{project.description}</p>
+                            <small><strong>Tech:</strong> {project.technologies}</small>
+                            <a href={project.link} target="_blank" rel="noopener noreferrer">
+                                <button>View Project</button>
+                            </a>
+                        </div>
+                    </div>
                 ))}
             </div>
-        </div>
+        </section>
     );
 }
 

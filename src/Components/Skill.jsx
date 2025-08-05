@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import '../Css/Skill.css'; // Ensure this includes your custom animation styles
+import '../Css/Skill.css';
+
+// Images
 import Html from '../Images/html.webp';
 import Css from '../Images/css-icon.webp';
 import Js from '../Images/js-logo.png';
@@ -11,10 +13,15 @@ import VisualStudio from '../Images/vs.png';
 import C from '../Images/C.png';
 import Cpp from '../Images/c-plus.webp';
 import Java from '../Images/java.webp';
-import Sql from '../Images/sql.png'
+import Sql from '../Images/sql.png';
+import NodeJs from '../Images/nodejs.png';
+import MongoDB from '../Images/mongodb.png';
+import Eclipse from '../Images/eclipse.png';
+import IntelliJ from '../Images/intellij.png';
+import VMware from '../Images/vmware.png';
 
 function Skill() {
-  const Skills = [
+  const skillsData = [
     {
       id: 1,
       name: "Front-end",
@@ -22,17 +29,22 @@ function Skill() {
     },
     {
       id: 2,
-      name: "Tools",
-      skills: ["Git", "GitHub", "Visual Studio"],
+      name: "Back-end",
+      skills: ["Node.js", "MongoDB"],
     },
     {
       id: 3,
+      name: "Tools",
+      skills: ["Git", "GitHub", "Visual Studio", "Eclipse IDE", "IntelliJ IDEA", "VMware"],
+    },
+    {
+      id: 4,
       name: "Programming Language",
       skills: ["C", "C++", "Java"],
     },
     {
-      id: 4,
-      name: "Data Base",
+      id: 5,
+      name: "Database",
       skills: ["Sql plus"],
     },
   ];
@@ -46,58 +58,56 @@ function Skill() {
     Git: Git,
     GitHub: GitHub,
     "Visual Studio": VisualStudio,
+    "Eclipse IDE": Eclipse,
+    "IntelliJ IDEA": IntelliJ,
+    VMware: VMware,
     C: C,
     "C++": Cpp,
     Java: Java,
-    "Sql plus": Sql
+    "Sql plus": Sql,
+    "Node.js": NodeJs,
+    MongoDB: MongoDB
   };
 
-  const [skillstitle, setskillstitle] = useState(''); // Initially empty to show all skills
+  const [activeCategory, setActiveCategory] = useState('');
 
-  const Showtitle = (e) => {
-    const txt = e.target.innerText;
-    setskillstitle(txt);
+  const handleCategoryClick = (e) => {
+    const selected = e.target.innerText;
+    setActiveCategory((prev) => (prev === selected ? '' : selected));
   };
 
-  const filteredSkills = skillstitle
-    ? Skills.filter(
-        (skill) => skill.name.toLowerCase() === skillstitle.toLowerCase()
-      )
-    : Skills; // Show all skills if no title is selected
+  const filteredSkills = activeCategory
+    ? skillsData.filter((cat) => cat.name.toLowerCase() === activeCategory.toLowerCase())
+    : skillsData;
 
   return (
-    <div className='Skills'>
-    <div className="Skill-Container">
-      <div className="Skill-section-Head">
-        <h1>Technical Proficiency</h1>
-      </div>
-      <div className="Skill-section">
-        {Skills.map((skill) => (
-          <div
-            key={skill.id}
-            className="Skill-box"
-            onClick={Showtitle}
-          >
-            {skill.name}
-          </div>
-        ))}
-      </div>
-      <div className="Skill-section">
-        <ul>
+    <div className="skills-wrapper">
+      <div className="skills-container">
+        <h1 className="skills-title">Technical Proficiency</h1>
+
+        <div className="category-list">
+          {skillsData.map((category) => (
+            <div
+              key={category.id}
+              className={`category-box ${activeCategory === category.name ? 'active' : ''}`}
+              onClick={handleCategoryClick}
+            >
+              {category.name}
+            </div>
+          ))}
+        </div>
+
+        <div className="icons-grid">
           {filteredSkills.map((category) =>
-            category.skills.map((skill, index) => (
-              <li key={index}>
-                <img
-                  src={skillImages[skill]}
-                  alt={skill}
-                  title={skill}
-                />
-              </li>
+            category.skills.map((skill, idx) => (
+              <div className="skill-icon-box" key={idx} title={skill}>
+                <img src={skillImages[skill]} alt={skill} />
+                <span>{skill}</span>
+              </div>
             ))
           )}
-        </ul>
+        </div>
       </div>
-    </div>
     </div>
   );
 }
