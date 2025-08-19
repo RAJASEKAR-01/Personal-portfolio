@@ -1,6 +1,6 @@
 import React from 'react'
 import '../Css/About.css'
-import Raja from '../Images/Rajasekar.jpg';
+import Raja from '../Images/Raja.png';
 function About() {
   return (
     <div className='About-section'>
