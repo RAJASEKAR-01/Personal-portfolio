@@ -2,7 +2,8 @@ import "../Css/Project.css";
 import WeatherImg from '../Images/Weatherweb.png';
 import PortfolioImg from '../Images/portfolio.png';
 import TicTacToeImg from '../Images/tic-tac-toe.png';
-import EcommerceMERNImg from '../Images/Ecommerce.png'; // Add your image here
+import EcommerceMERNImg from '../Images/Ecommerce.png';
+import ChatBotImg from '../Images/Chatbotproject.png'; // Add your image here
 
 function Project() {
     const projects = [
@@ -16,6 +17,15 @@ function Project() {
         },
         { 
             id: 2, 
+            image: ChatBotImg,
+            projectname: "Chatbot (Gemini AI)", 
+            description: "This chatbot is designed to provide quick and interactive assistanceto users in real time",
+            technologies: "React.js, CSS, Google Gemini API",
+            link: "https://chatbot-genx.vercel.app/"
+            
+        },
+        { 
+            id: 3, 
             image: WeatherImg,
             projectname: "Weather App", 
             description: "Real-time weather app using OpenWeather API.",
@@ -24,7 +34,7 @@ function Project() {
             
         },
         {
-            id: 3,
+            id: 4,
             image: PortfolioImg,
             projectname: "Personal Portfolio", 
             description: "Modern portfolio to showcase projects and skills.",
@@ -33,7 +43,7 @@ function Project() {
             
         },
         {
-            id: 4,
+            id: 5,
             image: TicTacToeImg,
             projectname: "Tic-Tac-Toe Game",
             description: "Fun, responsive 2-player game in JavaScript.",
