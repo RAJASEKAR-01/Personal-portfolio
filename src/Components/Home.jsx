@@ -6,7 +6,7 @@ import 'react-awesome-button/dist/styles.css';
 
 function Home() {
   const viewResume = () => {
-    window.open('/Resume.jpg', '_blank'); // Resume image
+    window.open('/Resume-cv.pdf', '_blank'); // Resume image
   };
 
   const contactMe = () => {
