@@ -6,7 +6,7 @@ import 'react-awesome-button/dist/styles.css';
 
 function Home() {
   const viewResume = () => {
-    window.open('/Resume_cv_Rajasekar.pdf', '_blank'); 
+    window.open('/Resume_Rajasekar.pdf', '_blank'); 
   };
 
   const contactMe = () => {
