@@ -25,7 +25,7 @@ function Project() {
         link: "https://genxcode-project.vercel.app/"  
          },
         { 
-            id: 2, 
+            id: 3, 
             image: ChatBotImg,
             projectname: "Chatbot (Gemini AI)", 
             description: "This chatbot is designed to provide quick and interactive assistanceto users in real time",
@@ -34,7 +34,7 @@ function Project() {
             
         },
         { 
-            id: 3, 
+            id: 4, 
             image: WeatherImg,
             projectname: "Weather App", 
             description: "Real-time weather app using OpenWeather API.",
@@ -43,7 +43,7 @@ function Project() {
             
         },
         {
-            id: 4,
+            id: 5,
             image: PortfolioImg,
             projectname: "Personal Portfolio", 
             description: "Modern portfolio to showcase projects and skills.",
@@ -52,7 +52,7 @@ function Project() {
             
         },
         {
-            id: 5,
+            id: 6,
             image: TicTacToeImg,
             projectname: "Tic-Tac-Toe Game",
             description: "Fun, responsive 2-player game in JavaScript.",
