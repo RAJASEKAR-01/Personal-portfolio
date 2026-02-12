@@ -3,7 +3,8 @@ import WeatherImg from '../Images/Weatherweb.png';
 import PortfolioImg from '../Images/portfolio.png';
 import TicTacToeImg from '../Images/tic-tac-toe.png';
 import EcommerceMERNImg from '../Images/Ecommerce.png';
-import ChatBotImg from '../Images/Chatbotproject.png'; // Add your image here
+import ChatBotImg from '../Images/Chatbotproject.png'; 
+import GenxcodeImg from '..//Images/Genxcode.png';// Add your image here
 
 function Project() {
     const projects = [
@@ -15,6 +16,14 @@ function Project() {
             technologies: "MongoDB, Express.js, React.js, Node.js",
             link: "https://ecommerce-new-demo.vercel.app/"  
         },
+        { 
+        id: 2, 
+        image: GenxcodeImg,
+        projectname: "GenXCode Business Web Service",
+        description: "Business web service application designed to showcase services, manage client interactions, and provide a professional online presence.",
+        technologies: "React.js, JavaScript, CSS, REST APIs",
+        link: "https://genxcode-project.vercel.app/"  
+         },
         { 
             id: 2, 
             image: ChatBotImg,
